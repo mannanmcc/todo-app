@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <ol class="breadcrumb">
+        <li><a href="{{ path('todo_list') }}" title="Home page">Home</a></li>
+        <li><a href="{{ path('todo_list') }}" title="Task list">Task list</a></li>
+        <li class="active">Details</li>
+    </ol>
+
+    <h2 class="page-header">{{ todo.name }}</h2><br>
+    <div style="padding: 10px 0; min-height: 100px;">
+        {{ todo.description }}
+    </div>
+    <div>
+        <strong>Due date:</strong> {{ todo.dueDate|date('F j, Y, g:i a') }}
+    </div>
+{% endblock %}

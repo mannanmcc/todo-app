@@ -1,0 +1,23 @@
+AppBundle\Entity\Todo:
+    type: entity
+    table: todo
+
+    id:
+        id:
+            id: true
+            type: integer
+            column: id
+            generator:
+                strategy: AUTO
+
+    fields:
+        name:
+            type: string
+        description:
+            type: string
+        dueDate:
+            type: datetime
+            column: dueDate
+        createdAt:
+            type: datetime
+            column: createdAt

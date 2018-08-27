@@ -1,0 +1,29 @@
+home_page:
+    path:     /
+    defaults: { _controller: AppBundle:Todo:list }
+    methods: [GET]
+
+todo_list:
+    path:     /todos
+    defaults: { _controller: AppBundle:Todo:list }
+    methods: [GET]
+
+todo_create:
+    path: /todo/create
+    defaults: { _controller: AppBundle:Todo:create }
+    methods: [GET,POST]
+
+todo_edit:
+    path: /todo/edit/{id}
+    defaults: { _controller: AppBundle:Todo:edit }
+    methods: [GET,POST]
+
+todo_details:
+    path: /todo/details/{id}
+    defaults: { _controller: AppBundle:Todo:details }
+    methods: [GET]
+
+todo_delete:
+    path: /todo/delete/{id}
+    defaults: { _controller: AppBundle:Todo:delete }
+    methods: [GET]
